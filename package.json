@@ -6,14 +6,16 @@
     "start": "node index.js",
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-     "build:ui": "rm -rf dist && cd ../phonebookfrontend && npm run build && cp -r dist ../phonebookbackend",
+    "build:ui": "rm -rf dist && cd ../phonebookfrontend && npm run build && cp -r dist ../phonebookbackend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "Emery Bashige",
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^4.21.2",
+    "mongoose": "^8.13.2",
     "morgan": "^1.10.0"
   }
 }
